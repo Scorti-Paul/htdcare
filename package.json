@@ -1,0 +1,37 @@
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Paul Ahorsu",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc-alias && tsc -w",
+    "dev": "nodemon dist/index.js",
+    "build": "yarn && rimraf ./dist && tsc && tsc-alias",
+    "start": "yarn --production=false && yarn run build && node dist/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.4.5"
+  }
+}
